@@ -8,7 +8,7 @@ export default function Hero({ onStartClick }) {
       {/* Full-Screen Video Background */}
       <div className="absolute inset-0 w-full h-full overflow-hidden z-0">
         <video
-          src="https://labs.google/fx/api/og-video/shared/b89e2e9b-0e5a-43ff-94f3-dc93e9fbec49"
+          src="/Semi-truck3.mp4"
           autoPlay
           loop
           muted
@@ -31,7 +31,7 @@ export default function Hero({ onStartClick }) {
         </div> */}
 
         {/* Headings */}
-        <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight leading-none max-w-4xl mx-auto drop-shadow-xl">
+        <h1 className="text-3xl md:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight max-w-4xl mx-auto drop-shadow-xl">
           <span className="block text-white mb-3 drop-shadow-md">Predictive Routing Risk</span>
           <span className="bg-gradient-to-r from-blue-400 via-indigo-400 to-emerald-400 bg-clip-text text-transparent drop-shadow-md">
             & Automated Routing Optimization
@@ -63,16 +63,16 @@ export default function Hero({ onStartClick }) {
         {/* Micro Stats */}
         <div className="pt-12 border-t border-white/20 grid grid-cols-3 gap-6 max-w-lg mx-auto backdrop-blur-xs">
           <div>
-            <span className="block text-2xl md:text-3xl font-extrabold text-white drop-shadow-md">99.4%</span>
-            <span className="text-xs text-white font-bold uppercase tracking-wider drop-shadow-md">Routing Accuracy</span>
+            <span className="block text-2xl md:text-3xl lg:text-4xl font-extrabold text-white drop-shadow-md">99.4%</span>
+            <span className="text-xs md:text-sm text-slate-200 font-bold uppercase tracking-wider drop-shadow-md">Routing Accuracy</span>
           </div>
           <div>
-            <span className="block text-2xl md:text-3xl font-extrabold text-white drop-shadow-md">&lt; 3.2s</span>
-            <span className="text-xs text-white font-bold uppercase tracking-wider drop-shadow-md">Triage Speed</span>
+            <span className="block text-2xl md:text-3xl lg:text-4xl font-extrabold text-white drop-shadow-md">&lt; 3.2s</span>
+            <span className="text-xs md:text-sm text-slate-200 font-bold uppercase tracking-wider drop-shadow-md">Triage Speed</span>
           </div>
           <div>
-            <span className="block text-2xl md:text-3xl font-extrabold text-white drop-shadow-md">28%</span>
-            <span className="text-xs text-white font-bold uppercase tracking-wider drop-shadow-md">Delay Reduction</span>
+            <span className="block text-2xl md:text-3xl lg:text-4xl font-extrabold text-white drop-shadow-md">28%</span>
+            <span className="text-xs md:text-sm text-slate-200 font-bold uppercase tracking-wider drop-shadow-md">Delay Reduction</span>
           </div>
         </div>
       </div>
