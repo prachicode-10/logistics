@@ -1,0 +1,7 @@
+pandas
+requests
+xgboost
+numpy
+folium
+pytest
+scikit-learn

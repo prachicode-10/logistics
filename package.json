@@ -1,0 +1,8 @@
+{
+  "name": "kiit-gds-root",
+  "private": true,
+  "scripts": {
+    "dev": "npm --prefix invoice-triage/frontend run dev",
+    "build": "npm --prefix invoice-triage/frontend run build"
+  }
+}
