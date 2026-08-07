@@ -5,3 +5,4 @@ numpy
 folium
 pytest
 scikit-learn
+geopy
