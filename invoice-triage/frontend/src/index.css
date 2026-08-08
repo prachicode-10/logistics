@@ -83,8 +83,19 @@
 /* Neon Glows for Map Polyline SVGs */
 .neon-optimal-route {
   filter: drop-shadow(0 0 4px rgba(16, 185, 129, 0.8)) drop-shadow(0 0 8px rgba(16, 185, 129, 0.5));
+  animation: flow-route 1.2s linear infinite;
 }
 
 .neon-standard-route {
   filter: drop-shadow(0 0 4px rgba(244, 63, 94, 0.8)) drop-shadow(0 0 8px rgba(244, 63, 94, 0.5));
+  animation: flow-route 1.2s linear infinite;
+}
+
+@keyframes flow-route {
+  from {
+    stroke-dashoffset: 30;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
 }
