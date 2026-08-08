@@ -44,15 +44,6 @@ export default function Navbar({ onLoginClick, onSignupClick }) {
           <a href="#features" className="text-base font-medium text-slate-300 hover:text-white transition-colors">
             Features
           </a>
-          <a href="#demo" className="text-base font-medium text-slate-300 hover:text-white transition-colors">
-            Interactive Demo
-          </a>
-          <a href="#analytics" className="text-base font-medium text-slate-300 hover:text-white transition-colors">
-            Analytics
-          </a>
-          <a href="#docs" className="text-base font-medium text-slate-300 hover:text-white transition-colors">
-            Docs
-          </a>
         </div>
 
         {/* Actions */}
@@ -90,27 +81,6 @@ export default function Navbar({ onLoginClick, onSignupClick }) {
             className="text-slate-300 hover:text-white transition-colors py-2 text-lg font-medium"
           >
             Features
-          </a>
-          <a 
-            href="#demo" 
-            onClick={() => setMobileMenuOpen(false)}
-            className="text-slate-300 hover:text-white transition-colors py-2 text-lg font-medium"
-          >
-            Interactive Demo
-          </a>
-          <a 
-            href="#analytics" 
-            onClick={() => setMobileMenuOpen(false)}
-            className="text-slate-300 hover:text-white transition-colors py-2 text-lg font-medium"
-          >
-            Analytics
-          </a>
-          <a 
-            href="#docs" 
-            onClick={() => setMobileMenuOpen(false)}
-            className="text-slate-300 hover:text-white transition-colors py-2 text-lg font-medium"
-          >
-            Docs
           </a>
           <div className="border-t border-brand-border/60 pt-6 flex flex-col space-y-3">
             <button 

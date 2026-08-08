@@ -67,7 +67,6 @@ export default function App() {
           </div>
           <div className="flex space-x-6">
             <a href="#features" className="hover:text-slate-300 transition-colors">Features</a>
-            <a href="#demo" className="hover:text-slate-300 transition-colors">Demo</a>
             <a href="https://github.com/PratikRanjan4/kiit-logistics-engine" target="_blank" rel="noreferrer" className="hover:text-slate-300 transition-colors">GitHub Repository</a>
           </div>
         </div>
