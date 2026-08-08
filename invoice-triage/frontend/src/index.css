@@ -79,3 +79,12 @@
 .glow-crimson {
   box-shadow: 0 0 50px -10px rgba(239, 68, 68, 0.35);
 }
+
+/* Neon Glows for Map Polyline SVGs */
+.neon-optimal-route {
+  filter: drop-shadow(0 0 4px rgba(16, 185, 129, 0.8)) drop-shadow(0 0 8px rgba(16, 185, 129, 0.5));
+}
+
+.neon-standard-route {
+  filter: drop-shadow(0 0 4px rgba(244, 63, 94, 0.8)) drop-shadow(0 0 8px rgba(244, 63, 94, 0.5));
+}

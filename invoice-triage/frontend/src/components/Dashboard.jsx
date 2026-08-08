@@ -983,11 +983,21 @@ export default function Dashboard({ user, onLogout }) {
                           </Marker>
 
                           {/* Draw both active shipment routes with clear color highlights, popup data, and choice options */}
+                          {/* Standard Route - Glow Layer (Shifted slightly to prevent overlapping) */}
                           <Polyline 
-                            positions={activeShipment.normal_route.coords.map(c => [c[1], c[0]])} 
+                            positions={activeShipment.normal_route.coords.map(c => [c[1] + 0.025, c[0] + 0.025])} 
                             color="#f43f5e" 
-                            weight={currentSelectedType === 'normal' ? 8 : 4}
-                            opacity={currentSelectedType === 'normal' ? 1.0 : 0.65}
+                            weight={currentSelectedType === 'normal' ? 14 : 8}
+                            opacity={0.25}
+                          />
+                          {/* Standard Route - Dotted Core Layer (Shifted slightly to prevent overlapping) */}
+                          <Polyline 
+                            positions={activeShipment.normal_route.coords.map(c => [c[1] + 0.025, c[0] + 0.025])} 
+                            color="#f43f5e" 
+                            weight={currentSelectedType === 'normal' ? 5 : 3}
+                            opacity={currentSelectedType === 'normal' ? 1.0 : 0.7}
+                            dashArray="5, 10"
+                            className="neon-standard-route"
                           >
                             <Popup>
                               <div className="p-2 space-y-2 text-xs min-w-[160px] text-slate-800">
@@ -1010,11 +1020,21 @@ export default function Dashboard({ user, onLogout }) {
                             </Popup>
                           </Polyline>
 
+                          {/* Optimized Route - Glow Layer */}
                           <Polyline 
                             positions={activeShipment.optimized_route.coords.map(c => [c[1], c[0]])} 
                             color="#10b981" 
-                            weight={currentSelectedType === 'optimized' ? 8 : 4}
-                            opacity={currentSelectedType === 'optimized' ? 1.0 : 0.65}
+                            weight={currentSelectedType === 'optimized' ? 14 : 8}
+                            opacity={0.25}
+                          />
+                          {/* Optimized Route - Dotted Core Layer */}
+                          <Polyline 
+                            positions={activeShipment.optimized_route.coords.map(c => [c[1], c[0]])} 
+                            color="#10b981" 
+                            weight={currentSelectedType === 'optimized' ? 5 : 3}
+                            opacity={currentSelectedType === 'optimized' ? 1.0 : 0.7}
+                            dashArray="5, 10"
+                            className="neon-optimal-route"
                           >
                             <Popup>
                               <div className="p-2 space-y-2 text-xs min-w-[160px] text-slate-800">
