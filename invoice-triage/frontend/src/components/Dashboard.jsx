@@ -374,17 +374,7 @@ export default function Dashboard({ user, onLogout }) {
               <span>History</span>
             </button>
 
-            <button 
-              onClick={() => setActiveTab('settings')}
-              className={`w-full flex items-center space-x-3 px-3 py-2.5 rounded-xl font-medium text-sm transition-all ${
-                activeTab === 'settings'
-                  ? 'bg-blue-600 text-white shadow-[0_4px_12px_rgba(59,130,246,0.3)]'
-                  : darkMode ? 'text-slate-400 hover:text-white hover:bg-slate-800/40' : 'text-slate-600 hover:text-slate-900 hover:bg-slate-100'
-              }`}
-            >
-              <SettingsIcon className="w-4 h-4" />
-              <span>Settings</span>
-            </button>
+
           </div>
 
           <div className={`p-4 rounded-2xl border text-xs ${darkMode ? 'bg-slate-900/60 border-slate-800/60 text-slate-400' : 'bg-slate-50 border-slate-200 text-slate-600'}`}>
@@ -1331,56 +1321,7 @@ export default function Dashboard({ user, onLogout }) {
             </div>
           )}
 
-          {/* TAB CONTENT: SETTINGS */}
-          {activeTab === 'settings' && (
-            <div className="space-y-8 animate-fade-in max-w-3xl mx-auto">
-              <div>
-                <h1 className="text-2xl font-black tracking-tight">System Configuration</h1>
-                <p className="text-sm text-slate-500">Configure parameters for XGBoost classification modeling & TomTom geolocations.</p>
-              </div>
 
-              <div className={`p-6 rounded-3xl border shadow-xl space-y-6 ${darkMode ? 'bg-[#0f172a]/60 border-slate-800/80' : 'bg-white border-slate-200'}`}>
-                <div>
-                  <h3 className="font-extrabold text-base border-b pb-3 mb-4">Credentials & Gateways</h3>
-                  
-                  <div className="space-y-4">
-                    <div>
-                      <label className="block text-xs font-bold text-slate-500 mb-1.5 uppercase tracking-wider">TomTom Routing Api Key</label>
-                      <input 
-                        type="password" 
-                        className={`w-full border px-4 py-3 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500/20 text-sm ${darkMode ? 'bg-slate-900 border-slate-850 text-slate-200' : 'bg-slate-50 border-slate-200 text-slate-800'}`}
-                        value={tomtomApiKey}
-                        onChange={(e) => setTomtomApiKey(e.target.value)}
-                      />
-                    </div>
-                  </div>
-                </div>
-
-                <div>
-                  <h3 className="font-extrabold text-base border-b pb-3 mb-4">Model Hyperparameters</h3>
-                  
-                  <div className="grid grid-cols-2 gap-4 text-xs">
-                    <div className={`p-4 rounded-2xl border ${darkMode ? 'bg-slate-900/40 border-slate-850' : 'bg-slate-50 border-slate-200'}`}>
-                      <span className="block text-slate-500 font-bold uppercase tracking-wider text-[10px]">Model Estimators</span>
-                      <span className="text-base font-extrabold text-slate-200 mt-1 block">450 Trees</span>
-                    </div>
-                    <div className={`p-4 rounded-2xl border ${darkMode ? 'bg-slate-900/40 border-slate-850' : 'bg-slate-50 border-slate-200'}`}>
-                      <span className="block text-slate-500 font-bold uppercase tracking-wider text-[10px]">Learning Rate</span>
-                      <span className="text-base font-extrabold text-slate-200 mt-1 block">0.03</span>
-                    </div>
-                    <div className={`p-4 rounded-2xl border ${darkMode ? 'bg-slate-900/40 border-slate-850' : 'bg-slate-50 border-slate-200'}`}>
-                      <span className="block text-slate-500 font-bold uppercase tracking-wider text-[10px]">Anomaly Isolation threshold</span>
-                      <span className="text-base font-extrabold text-slate-200 mt-1 block">0.02 (Contamination)</span>
-                    </div>
-                    <div className={`p-4 rounded-2xl border ${darkMode ? 'bg-slate-900/40 border-slate-850' : 'bg-slate-50 border-slate-200'}`}>
-                      <span className="block text-slate-500 font-bold uppercase tracking-wider text-[10px]">Clustering algorithm</span>
-                      <span className="text-base font-extrabold text-slate-200 mt-1 block">KMeans (k=5)</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          )}
 
         </main>
       </div>
