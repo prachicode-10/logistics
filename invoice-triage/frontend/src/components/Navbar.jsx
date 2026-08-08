@@ -39,12 +39,7 @@ export default function Navbar({ onLoginClick, onSignupClick }) {
           </div>
         </div>
 
-        {/* Desktop Navigation */}
-        <div className="hidden md:flex items-center space-x-8">
-          <a href="#features" className="text-base font-medium text-slate-300 hover:text-white transition-colors">
-            Features
-          </a>
-        </div>
+
 
         {/* Actions */}
         <div className="hidden md:flex items-center space-x-4">
@@ -75,14 +70,7 @@ export default function Navbar({ onLoginClick, onSignupClick }) {
       {/* Mobile Menu Panel */}
       {mobileMenuOpen && (
         <div className="md:hidden fixed top-[73px] left-0 right-0 bg-slate-950/95 border-b border-brand-border/60 backdrop-blur-lg px-6 py-6 space-y-6 flex flex-col transition-all duration-300 shadow-lg">
-          <a 
-            href="#features" 
-            onClick={() => setMobileMenuOpen(false)}
-            className="text-slate-300 hover:text-white transition-colors py-2 text-lg font-medium"
-          >
-            Features
-          </a>
-          <div className="border-t border-brand-border/60 pt-6 flex flex-col space-y-3">
+          <div className="pt-2 flex flex-col space-y-3">
             <button 
               onClick={() => { setMobileMenuOpen(false); onLoginClick(); }}
               className="w-full text-center text-slate-300 hover:text-white py-3 rounded-xl border border-brand-border hover:bg-slate-900 transition-all font-medium"
